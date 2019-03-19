@@ -6,7 +6,7 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.state = { results: ['stringy'] };
+    this.state = { results: ['stringy', 'blindgy'] };
     this.setResults = this.setResults.bind(this);
   };
 
