@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Search } from './Search';
+import { Results } from './Results';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = { results: ['stringy'] };
+    this.setResults = this.setResults.bind(this);
+  };
+
+  setResults = results => this.setState(state => state.results = results);
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Search />
+        <Results results={this.state.results}/>
       </div>
     );
   }
