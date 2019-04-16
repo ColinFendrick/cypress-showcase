@@ -1,9 +1,7 @@
 import React from 'react';
 
-export const Results = ({ results }) => {
-  return (
-    <div>
-      {results.map(result => <div key={result.id}>{result.body}</div>)}
-    </div>
-  );
-};
+export const Results = ({ results }) =>
+  <div>
+    {results.map(result =><div key={result.id} className={`results-${result.userId}`}>{result.id}: {result.body}</div>)}
+  </div>
+

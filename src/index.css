@@ -6,9 +6,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 10000px;
+  background-color: #333;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.results-1 {
+  color: green;
+}
+
+.results-2 {
+  color: teal;
+}
+
+.results-3 {
+  color: salmon;
+}
+
+.results-4 {
+  color: purple;
+}
+
+.results-5 {
+  color: oldlace;
+}
+
+.results-6 {
+  color: goldenrod;
+}
+
+.result-7 {
+  color: orangered;
 }
