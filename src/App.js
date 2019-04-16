@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Search } from './Search';
 import { Results } from './Results';
-import { getRequest } from './SearchActions';
 import './App.css';
 
 class App extends Component {
@@ -11,15 +10,13 @@ class App extends Component {
     this.setResults = this.setResults.bind(this);
   };
 
-  // setResults = results => this.setState(state => state.results = results);
-
   setResults = (error, res) => {
+    console.log(error, res)
     if (error) {
-      console.log(error);
+      window.alert(error);
     } else if (res && res.body.length === 0) {
-      console.log('No results')
+      window.alert('No results')
     } else if (res && res.body.length) {
-      console.log(res)
       this.setState(state => state.results = res.body)
     };
   };
